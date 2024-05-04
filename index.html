@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>DIG3D: Marrying Gaussian Splatting with Deformable Transformer for Single Image 3D Reconstruction</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">DIG3D: Marrying Gaussian Splatting with Deformable Transformer for Single Image 3D Reconstruction</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+                <span class="author-block">
+                  <a >Jiamin Wu<sup>1,2</sup></a>,
+                </span>
+
+                <span class="author-block">
+                  <a href="https://kenkunliu.github.io/PersonalPage/">Kenkun Liu<sup>2,3</sup></a>,
+                </span>
+
+                <span class="author-block">
+                  <a >Han Gao<sup>2</sup></a>,
+                </span>
+
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=aDf9fpkAAAAJ&hl=en">Xiaoke Jiang<sup>2†</sup></a>,
+                </span>
+
+                <span class="author-block">
+                  <a href="https://www.leizhang.org" target="_blank"> Lei Zhang<sup>2</sup></a>
+                </span>
+            </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                      <sup>1</sup>Hong Kong University of Science and Technology, <br>
+                      <sup>2</sup>International Digital Economy Academy (IDEA), <br>
+                      <sup>3</sup>The Chinese University of Hong Kong (Shenzhen)
+                      <br>arXiv:2404.16323</span>
+                    <span class="eql-cntrb"><small><br><sup>†</sup>Corresponding Author</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2404.16323" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="https://arxiv.org/pdf/2404.16323" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2404.16323" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/teaser.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        A demo video. (To be updated...)
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<hr >
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this paper, we study the problem of 3D reconstruction from a single view RGB image and propose a novel approach called DIG3D for 3D
+            object reconstruction and novel view synthesis. Our method utilizes an encoder-decoder framework which generates 3D Gaussians in decoder with the guidance of depth-aware image features from encoder. In particular, we introduce the use of deformable transformer, allowing efficient and effective decoding through 3D reference point and multi-layer refinement adaptations. By harnessing the benefits of 3D Gaussians, our approach offers an efficient and accurate solution for 3D reconstruction from single view images. We evaluate our method on the ShapeNet SRN dataset,
+            getting PSNR of 24.21 and 24.98 in car and chair dataset, respectively. The result outperforming the recent method by around 2.25%, demonstrating
+            the effectiveness of our method in achieving superior results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<hr >
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      
+      <h2 class="title" style="text-align: center;">Method</h2>
+      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/method.png" class="center" alt="MY ALT TEXT"/>
+          <!-- <h2 class="subtitle has-text-centered">
+            Unifying Settings 1
+          </h2> -->
+        </div>
+      
+        <p>
+          (a) Overview of DIG3D. -->: steps not utilized in inference. (b)
+          Detailed structure for feature fusion in the encoder. (c) Detailed structure for
+          one decoder layer. Queries are updated at each layer and serve as input for the
+          next layer, while the reference points are updated based on the new centers of the
+          Gaussians and projected onto the image feature plane. DFA: deformable cross
+          attention layer; FFN: Feed Forward Network; ⊕: updation of 3D Gaussian.
+        </p>
+      
+      <!-- </div> -->
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+<hr >
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      
+        <h2 class="title" style="text-align: center;">Results</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/table_7.png"  class="center" alt="MY ALT TEXT"/>
+            <!-- <h2 class="subtitle has-text-centered">
+              Benchmarking Scene-specific Methods
+            </h2> -->
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/fig_4.png"  class="center" alt="MY ALT TEXT"/>
+            <!-- <h2 class="subtitle has-text-centered">
+              Benchmarking Scene-specific Methods
+            </h2> -->
+          </div>
+      
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<hr >
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      
+        <h2 class="title" style="text-align: center;">Comparisons</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/table_7.png"  class="center" alt="MY ALT TEXT"/>
+            <!-- <h2 class="subtitle has-text-centered">
+              Benchmarking Scene-specific Methods
+            </h2> -->
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <img src="static/images/fig_4.png"  class="center" alt="MY ALT TEXT"/>
+            <!-- <h2 class="subtitle has-text-centered">
+              Benchmarking Scene-specific Methods
+            </h2> -->
+          </div>
+      
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<hr >
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      
+        <h2 class="title" style="text-align: center;">Analysis</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/table_8_10.png" width="560" height="800" class="center" alt="MY ALT TEXT"/>
+          <!-- <h2 class="subtitle has-text-centered">
+            Benchmarking Scene-specific Methods
+          </h2> -->
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/fig_5.png" width="800" height="800"  class="center" alt="MY ALT TEXT"/>
+          <!-- <h2 class="subtitle has-text-centered">
+            Benchmarking Scene-specific Methods
+          </h2> -->
+        </div>
+      
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+
+<hr >
+<!-- References citation -->
+<!-- <section class="section" id="References">
+    <div class="container is-max-desktop content">
+      <h2 class="title">References</h2>
+      <pre><code>References: like [1] xxxx</code></pre>
+    </div>
+</section> -->
+<!-- End BibTex citation -->
+
+
+<hr >
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{wu2024dig3d,
+        title={DIG3D: Marrying Gaussian Splatting with Deformable Transformer for Single Image 3D Reconstruction},
+        author={Wu, Jiamin and Liu, Kenkun and Gao, Han and Jiang, Xiaoke and Zhang, Lei},
+        journal={arXiv preprint arXiv:2404.16323},
+        year={2024}
+      }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
