@@ -168,7 +168,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In this paper, we propose DIG3D (Gaussian splatting with deformable Transformer for single image 3D reconstruction), a novel approach for 3D object reconstruction and novel view synthesis from a single-view RGB image. In contrast to directly regressing 3D Gaussian parameters from per-pixel image features, DIG3D employs an encoder-decoder framework where the decoder generates 3D Gaussians guided by depth-aware image features from the encoder. This approach breaks away from predicting shortcuts of the input image, leading to improved both 3D object geometry and rendering accuracy. Particularly, deformable Transformer is empolyed to enable efficient and effective decoding through 3D reference point and multi-layer refinement adaptations. Leveraging the high speed of 3D Gaussian splatting, DIG3D provides an accurate and efficient solution for 3D reconstruction from single-view images. On the ShapeNet SRN dataset (category level) and the Google Scanned Objects dataset (open-category level), DIG3D outperforms previous methods by over 3%, achieving PSNR of 24.96 (average on chairs and cars dataset of ShapeNet SRN) and 21.70, respectively. Furthermore, our method achieves a 3D reconstruction speed of 7.2 FPS, at least 10 times faster than other Transformer-based models with speeds merely around 0.5 FPS.
+            Rencently, Gaussian splatting has demonstrated significant success in novel view synthesis. Current methods often regress Gaussians with pixel or point cloud correspondence, linking each Gaussian with a pixel or a 3D point. This leads to the redundancy of Gaussians being used to overfit the correspondence rather than the objects represented by the 3D Gaussians themselves, consequently wasting resources and lacking accurate geometries or textures. In this paper, we introduce LeanGaussian, a novel approach that treats each query in deformable Transformer as one 3D Gaussian ellipsoid, breaking the pixel or point cloud correspondence constraints. We leverage deformable decoder to iteratively refine the Gaussians layer-by-layer with the image features as keys and values. Notably, the center of each 3D Gaussian is defined as 3D reference points, which are then projected onto the image for deformable attention in 2D space. On both the ShapeNet SRN dataset (category level) and the Google Scanned Objects dataset (open-category level, trained with the Objaverse dataset), our approach, outperforms prior methods by approximately 6.1\%, achieving a PSNR of 25.44 and 22.36, respectively. Additionally, our method achieves a 3D reconstruction speed of 7.2 FPS and rendering speed 500 FPS. The code will be released at \href{https://github.com/jwubz123/DIG3D}{https://github.com/jwubz123/DIG3D}.
           </p>
         </div>
       </div>
@@ -365,7 +365,7 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{wu2024dig3d,
-        title={DIG3D: Marrying Gaussian Splatting with Deformable Transformer for Single Image 3D Reconstruction},
+        title={LeanGaussian: Breaking Pixel or Point Cloud Correspondence in Modeling 3D Gaussians},
         author={Wu, Jiamin and Liu, Kenkun and Gao, Han and Jiang, Xiaoke and Zhang, Lei},
         journal={arXiv preprint arXiv:2404.16323},
         year={2024}
